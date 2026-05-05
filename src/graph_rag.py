@@ -5,7 +5,7 @@ import re
 from neo4j import GraphDatabase
 
 from config import NEO4J_PASSWORD, NEO4J_URI, NEO4J_USERNAME
-from llm import LLMNotConfiguredError, generate_answer
+from llm import LLMNotConfiguredError, LLMResult, generate_answer, missing_llm_result
 
 
 def normalize(text: str) -> str:
@@ -58,11 +58,17 @@ class GraphRAG:
             return facts
 
     def answer(self, question: str) -> str:
+        return self.answer_with_usage(question).answer
+
+    def answer_with_usage(self, question: str) -> LLMResult:
         context = self.retrieve_context(question)
+        return self.answer_with_context(question, context)
+
+    def answer_with_context(self, question: str, context: str) -> LLMResult:
         try:
             return generate_answer(question, context, mode="GraphRAG")
         except LLMNotConfiguredError as error:
-            return str(error)
+            return missing_llm_result(str(error))
 
     def retrieve_context(self, question: str) -> str:
         lower = question.lower()
@@ -80,6 +86,8 @@ class GraphRAG:
             return self.context_former_google_people()
         if "former google" in lower or "former employees of google" in lower or "former google employees" in lower:
             return self.context_former_google_founders()
+        if "microsoft" in lower and ("invest" in lower or "partner" in lower):
+            return self.context_company_relations("Microsoft", ["INVESTED_IN", "PARTNERED_WITH"])
 
         entity = self.find_entity(question)
         if not entity:
@@ -143,6 +151,21 @@ class GraphRAG:
             )
             people = [row["person"] for row in rows]
             return "\n".join(f"{person} - FORMER_EMPLOYEE_OF -> Google and CO_FOUNDED -> an AI company" for person in people) if people else "No matching multi-hop path found."
+
+    def context_company_relations(self, company: str, relations: list[str]) -> str:
+        relation_pattern = "|".join(relations)
+        with self.driver.session() as session:
+            rows = session.run(
+                f"""
+                MATCH (company:Company {{name: $company}})-[r:{relation_pattern}]->(target)
+                RETURN company.name AS source, type(r) AS relation, target.name AS target
+                ORDER BY relation, target
+                """
+                ,
+                company=company,
+            )
+            facts = [f"{row['source']} - {row['relation']} -> {row['target']}" for row in rows]
+            return "\n".join(facts) if facts else "No matching graph facts found."
 
 
 if __name__ == "__main__":

@@ -24,12 +24,12 @@ def main():
 
             flat_started = time.perf_counter()
             flat_context = flat_rag.retrieve_context(question)
-            flat_answer = flat_rag.answer(question)
+            flat_result = flat_rag.answer_with_context(question, flat_context)
             flat_seconds = time.perf_counter() - flat_started
 
             graph_started = time.perf_counter()
             graph_context = graph_rag.retrieve_context(question)
-            graph_answer = graph_rag.answer(question)
+            graph_result = graph_rag.answer_with_context(question, graph_context)
             graph_seconds = time.perf_counter() - graph_started
 
             rows.append(
@@ -39,9 +39,16 @@ def main():
                     "entity": item.get("entity", ""),
                     "expected_answer": item["expected_answer"],
                     "flat_rag_context": flat_context,
-                    "flat_rag_answer": flat_answer,
+                    "flat_rag_answer": flat_result.answer,
+                    "flat_prompt_tokens": flat_result.prompt_tokens,
+                    "flat_completion_tokens": flat_result.completion_tokens,
+                    "flat_total_tokens": flat_result.total_tokens,
                     "graph_rag_context": graph_context,
-                    "graph_rag_answer": graph_answer,
+                    "graph_rag_answer": graph_result.answer,
+                    "graph_prompt_tokens": graph_result.prompt_tokens,
+                    "graph_completion_tokens": graph_result.completion_tokens,
+                    "graph_total_tokens": graph_result.total_tokens,
+                    "llm_model": graph_result.model,
                     "flat_rag_seconds": round(flat_seconds, 4),
                     "graph_rag_seconds": round(graph_seconds, 4),
                     "flat_rag_correct": "",

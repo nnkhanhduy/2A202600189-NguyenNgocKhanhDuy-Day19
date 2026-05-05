@@ -18,4 +18,4 @@ Which AI companies were co-founded by former Google employees?,Character.ai Adep
 Which companies were co-founded by Noam Shazeer and connected to Google?,Character.ai,Noam Shazeer,multi_hop
 Which companies were co-founded by Ashish Vaswani and connected to Google?,Adept AI,Ashish Vaswani,multi_hop
 Which former Google employees co-founded AI companies in the graph?,Noam Shazeer Daniel De Freitas David Luan Ashish Vaswani Mustafa Suleyman,Google,multi_hop
-Which answer nodes should be highlighted for the former Google employees query?,Character.ai Adept AI Inflection AI and their founder nodes,Google,visualization
+Which companies did Microsoft invest in or partner with in the graph?,OpenAI,Microsoft,multi_hop

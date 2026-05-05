@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import json
 
 from config import ARTICLE_DIR
-from llm import LLMNotConfiguredError, generate_answer
+from llm import LLMNotConfiguredError, LLMResult, generate_answer, missing_llm_result
 
 
 class FlatRAG:
@@ -37,11 +37,17 @@ class FlatRAG:
         return "\n".join(self.documents[index] for index in top_indexes if scores[index] > 0)
 
     def answer(self, question: str, top_k: int = 5) -> str:
+        return self.answer_with_usage(question, top_k=top_k).answer
+
+    def answer_with_usage(self, question: str, top_k: int = 5) -> LLMResult:
         context = self.retrieve_context(question, top_k=top_k)
+        return self.answer_with_context(question, context)
+
+    def answer_with_context(self, question: str, context: str) -> LLMResult:
         try:
             return generate_answer(question, context, mode="Flat RAG")
         except LLMNotConfiguredError as error:
-            return str(error)
+            return missing_llm_result(str(error))
 
 
 if __name__ == "__main__":

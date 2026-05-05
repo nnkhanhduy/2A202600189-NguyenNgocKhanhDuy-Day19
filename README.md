@@ -93,6 +93,31 @@ Results are written to:
 outputs/benchmark_results.csv
 ```
 
+The benchmark CSV includes timing and OpenAI token usage:
+
+```text
+flat_rag_seconds
+graph_rag_seconds
+flat_prompt_tokens
+flat_completion_tokens
+flat_total_tokens
+graph_prompt_tokens
+graph_completion_tokens
+graph_total_tokens
+```
+
+Deliverable notes, screenshot queries, and cost analysis are in:
+
+```text
+report/DELIVERABLES.md
+```
+
+Final lab report:
+
+```text
+report/FINAL_REPORT.md
+```
+
 ## Demo Queries
 
 Flat RAG should work for a simple factual question:
