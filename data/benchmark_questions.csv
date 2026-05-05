@@ -1,0 +1,21 @@
+question,expected_answer,entity,query_type
+What is OpenAI?,OpenAI is an AI research and deployment company,OpenAI,simple
+What is Anthropic?,Anthropic is an AI company,Anthropic,simple
+What is DeepMind?,DeepMind is an AI company or AI research lab,DeepMind,simple
+What is Google DeepMind?,Google DeepMind is connected to Google and DeepMind,Google DeepMind,simple
+What is Hugging Face?,Hugging Face is an AI company or machine learning platform,Hugging Face,simple
+What is Mistral AI?,Mistral AI is an AI company,Mistral AI,simple
+What is Character.ai?,Character.ai is an AI company or chatbot company,Character.ai,simple
+What is Adept AI?,Adept AI is an AI company,Adept AI,simple
+Who co-founded OpenAI?,Sam Altman Greg Brockman Ilya Sutskever,OpenAI,one_hop
+Who co-founded Anthropic?,Dario Amodei Daniela Amodei,Anthropic,one_hop
+Which company acquired DeepMind?,Google,DeepMind,one_hop
+Which company did Google acquire that is related to AI research?,DeepMind,Google,one_hop
+Which people connect Character.ai to Google?,Noam Shazeer and Daniel De Freitas,Character.ai,multi_hop
+Which people connect Adept AI to Google?,David Luan and Ashish Vaswani,Adept AI,multi_hop
+Which company is linked to Mustafa Suleyman and Google?,Inflection AI,Mustafa Suleyman,multi_hop
+Which AI companies were co-founded by former Google employees?,Character.ai Adept AI Inflection AI,Google,multi_hop
+Which companies were co-founded by Noam Shazeer and connected to Google?,Character.ai,Noam Shazeer,multi_hop
+Which companies were co-founded by Ashish Vaswani and connected to Google?,Adept AI,Ashish Vaswani,multi_hop
+Which former Google employees co-founded AI companies in the graph?,Noam Shazeer Daniel De Freitas David Luan Ashish Vaswani Mustafa Suleyman,Google,multi_hop
+Which answer nodes should be highlighted for the former Google employees query?,Character.ai Adept AI Inflection AI and their founder nodes,Google,visualization

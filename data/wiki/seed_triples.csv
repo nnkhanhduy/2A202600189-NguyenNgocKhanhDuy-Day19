@@ -1,0 +1,52 @@
+source,relation,target,source_type,target_type,evidence
+OpenAI,IS_A,AI research and deployment company,Company,Concept,Seed fact for simple definition demo
+OpenAI,CO_FOUNDED_BY,Sam Altman,Company,Person,OpenAI was co-founded by Sam Altman
+OpenAI,CO_FOUNDED_BY,Greg Brockman,Company,Person,OpenAI was co-founded by Greg Brockman
+OpenAI,CO_FOUNDED_BY,Ilya Sutskever,Company,Person,OpenAI was co-founded by Ilya Sutskever
+Anthropic,CO_FOUNDED_BY,Dario Amodei,Company,Person,Anthropic was co-founded by Dario Amodei
+Anthropic,CO_FOUNDED_BY,Daniela Amodei,Company,Person,Anthropic was co-founded by Daniela Amodei
+Character.ai,CO_FOUNDED_BY,Noam Shazeer,Company,Person,Character.ai was co-founded by Noam Shazeer
+Character.ai,CO_FOUNDED_BY,Daniel De Freitas,Company,Person,Character.ai was co-founded by Daniel De Freitas
+Adept AI,CO_FOUNDED_BY,David Luan,Company,Person,Adept AI was co-founded by David Luan
+Adept AI,CO_FOUNDED_BY,Ashish Vaswani,Company,Person,Adept AI was co-founded by Ashish Vaswani
+Inflection AI,CO_FOUNDED_BY,Mustafa Suleyman,Company,Person,Inflection AI was co-founded by Mustafa Suleyman
+Inflection AI,CO_FOUNDED_BY,Reid Hoffman,Company,Person,Inflection AI was co-founded by Reid Hoffman
+Noam Shazeer,FORMER_EMPLOYEE_OF,Google,Person,Company,Noam Shazeer was formerly at Google
+Daniel De Freitas,FORMER_EMPLOYEE_OF,Google,Person,Company,Daniel De Freitas was formerly at Google
+David Luan,FORMER_EMPLOYEE_OF,Google,Person,Company,David Luan was formerly at Google
+Ashish Vaswani,FORMER_EMPLOYEE_OF,Google,Person,Company,Ashish Vaswani was formerly at Google
+Mustafa Suleyman,FORMER_EMPLOYEE_OF,Google,Person,Company,Mustafa Suleyman co-founded DeepMind which was acquired by Google
+DeepMind,ACQUIRED_BY,Google,Company,Company,Google acquired DeepMind
+Google,ACQUIRED,DeepMind,Company,Company,Google acquired DeepMind
+Microsoft,INVESTED_IN,OpenAI,Company,Company,Microsoft invested in OpenAI
+OpenAI,RECEIVED_INVESTMENT_FROM,Microsoft,Company,Company,OpenAI received investment from Microsoft
+Microsoft,PARTNERED_WITH,OpenAI,Company,Company,Microsoft partnered with OpenAI
+OpenAI,PARTNERED_WITH,Microsoft,Company,Company,OpenAI partnered with Microsoft
+Microsoft,OWNS,GitHub,Company,Company,Microsoft owns GitHub
+GitHub,OWNED_BY,Microsoft,Company,Company,GitHub is owned by Microsoft
+Microsoft,OWNS,LinkedIn,Company,Company,Microsoft owns LinkedIn
+LinkedIn,OWNED_BY,Microsoft,Company,Company,LinkedIn is owned by Microsoft
+Amazon,INVESTED_IN,Anthropic,Company,Company,Amazon invested in Anthropic
+Anthropic,RECEIVED_INVESTMENT_FROM,Amazon,Company,Company,Anthropic received investment from Amazon
+Google,INVESTED_IN,Anthropic,Company,Company,Google invested in Anthropic
+Anthropic,RECEIVED_INVESTMENT_FROM,Google,Company,Company,Anthropic received investment from Google
+Meta,DEVELOPS,Llama,Company,Product,Meta develops Llama
+Llama,PRODUCT_OF,Meta,Product,Company,Llama is a product of Meta
+Meta,OWNS,Instagram,Company,Company,Meta owns Instagram
+Instagram,OWNED_BY,Meta,Company,Company,Instagram is owned by Meta
+Meta,OWNS,WhatsApp,Company,Company,Meta owns WhatsApp
+WhatsApp,OWNED_BY,Meta,Company,Company,WhatsApp is owned by Meta
+Nvidia,DEVELOPS,CUDA,Company,Product,Nvidia develops CUDA
+CUDA,PRODUCT_OF,Nvidia,Product,Company,CUDA is a product of Nvidia
+Nvidia,PRODUCES,GPU,Company,Product,Nvidia produces GPUs
+GPU,PRODUCT_OF,Nvidia,Product,Company,GPUs are products of Nvidia
+Google,DEVELOPS,Google AI,Company,Product,Google develops Google AI
+Google AI,PRODUCT_OF,Google,Product,Company,Google AI is related to Google
+Google,DEVELOPS,Google Brain,Company,Product,Google developed Google Brain
+Google Brain,PRODUCT_OF,Google,Product,Company,Google Brain is related to Google
+Hugging Face,DEVELOPS,Transformers,Company,Product,Hugging Face develops Transformers
+Transformers,PRODUCT_OF,Hugging Face,Product,Company,Transformers is a Hugging Face library
+OpenAI,DEVELOPS,ChatGPT,Company,Product,OpenAI develops ChatGPT
+ChatGPT,PRODUCT_OF,OpenAI,Product,Company,ChatGPT is a product of OpenAI
+OpenAI,DEVELOPS,GPT models,Company,Product,OpenAI develops GPT models
+GPT models,PRODUCT_OF,OpenAI,Product,Company,GPT models are products of OpenAI

@@ -1,0 +1,100 @@
+OpenAI
+Anthropic
+DeepMind
+Google DeepMind
+Google AI
+Google Brain
+Microsoft
+Microsoft Research
+GitHub
+LinkedIn
+Apple Inc.
+Siri
+Meta Platforms
+Facebook AI Research
+Instagram
+WhatsApp
+Amazon Web Services
+Amazon Alexa
+IBM
+IBM Watson
+Nvidia
+CUDA
+Tesla, Inc.
+Tesla Autopilot
+xAI
+Grok
+Oracle Corporation
+Salesforce
+Slack Technologies
+Adobe Inc.
+Adobe Sensei
+SAP
+ServiceNow
+Palantir Technologies
+Databricks
+Snowflake Inc.
+MongoDB Inc.
+Elastic NV
+UiPath
+Automation Anywhere
+C3.ai
+DataRobot
+H2O.ai
+Scale AI
+SambaNova Systems
+Cerebras Systems
+Graphcore
+Groq
+Hugging Face
+Stability AI
+Midjourney
+Runway
+Perplexity AI
+Character.ai
+Inflection AI
+Adept AI
+Cohere
+Mistral AI
+Aleph Alpha
+AI21 Labs
+You.com
+Replit
+Grammarly
+Duolingo
+Khan Academy
+Coursera
+Chegg
+Zoom Video Communications
+Dropbox
+Box, Inc.
+Atlassian
+Canva
+Notion
+Figma
+Asana, Inc.
+Monday.com
+OpenText
+Clarifai
+OpenCV
+Open Robotics
+Boston Dynamics
+Figure AI
+Sanctuary AI
+Anduril Industries
+Shield AI
+Waymo
+Cruise LLC
+Aurora Innovation
+Mobileye
+Baidu
+SenseTime
+Megvii
+ByteDance
+TikTok
+Alibaba Cloud
+Tencent
+Huawei
+Samsung Electronics
+Sony
+LG Electronics

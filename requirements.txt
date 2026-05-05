@@ -1,0 +1,7 @@
+neo4j
+openai
+pandas
+python-dotenv
+requests
+scikit-learn
+numpy
